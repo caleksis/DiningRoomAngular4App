@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-sm-8">
+		<dr-pagination [totalItems]="restaurantList?.count" [pageSize]="12" (pageChange)="updateRestaurants($event)"></dr-pagination>
+	</div>
+	<span class="col-sm-4">
+		<dr-price (priceChange)="updateRestaurants($event)"></dr-price>
+	</span>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<dr-restaurant-list [restaurants]="restaurantList?.results"></dr-restaurant-list>
+	</div>
+</div>

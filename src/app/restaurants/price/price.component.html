@@ -1,0 +1,6 @@
+<form>
+  <label><b>Price range</b></label>
+  <input name="priceFrom" type="number" [(ngModel)]="filter.priceFrom" (change)="changePrice()">
+  <input name="priceTo" type="number" [(ngModel)]="filter.priceTo" (change)="changePrice()">
+</form>
+

@@ -1,0 +1,9 @@
+<button (click)="changePage(1)" class="btn">First</button>
+<button  (click)="changePage(currentPage - 1)"class="btn">Prev</button>
+
+<button *ngFor="let page of pages; let i = index" (click)="changePage(i+1)" class="btn" [ngClass]="{'btn-primary': i+1 == currentPage}">
+  {{i+1}}
+</button>
+
+<button  (click)="changePage(currentPage + 1)" class="btn">Next</button>
+<button  (click)="changePage(pageCount)" class="btn">Last</button>
